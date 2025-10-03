@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Check, X, Brain, Shield, Bot, DollarSign } from 'lucide-react';
-import '../../styles.css';
+import './HomePage.css';
 import '../styles/timeline.css';
-import { Modal } from "../components/Modal";
-import { useAccumulatedTimer, useExitIntent, hasSeenWithin, markSeenFor } from "../components/hooks";
+import { Modal } from "./Modal";
+import { useAccumulatedTimer, useExitIntent, hasSeenWithin, markSeenFor } from "./hooks";
 
 
 
