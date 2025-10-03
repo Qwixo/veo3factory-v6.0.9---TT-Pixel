@@ -1,0 +1,59 @@
+/* Timeline Section Styles */
+.timeline-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 215, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+}
+
+/* Enhanced FAQ Styles */
+.faq-question:hover {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+/* Spots Counter Animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.7);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 20px rgba(255, 68, 68, 0);
+  }
+}
+
+/* Responsive table styles */
+@media (max-width: 768px) {
+  .timeline-card {
+    padding: 20px !important;
+  }
+  
+  .timeline-card h3 {
+    font-size: 16px !important;
+  }
+  
+  .timeline-card p {
+    font-size: 13px !important;
+  }
+  
+  /* Make tables scroll horizontally on mobile */
+  table {
+    min-width: 600px;
+  }
+  
+  th, td {
+    padding: 12px 8px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-card {
+    padding: 16px !important;
+  }
+  
+  th, td {
+    padding: 10px 6px !important;
+    font-size: 12px !important;
+  }
+}

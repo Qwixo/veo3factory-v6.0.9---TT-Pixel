@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule a Call - Custom AI Builds | Veo3Factory-style</title>
+    <meta name="description" content="Book a call for a tailored AI build that automates your content and workflows, 24/7.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Schedule a Call - Custom AI Builds">
+    <meta property="og:description" content="Book a call for a tailored AI build that automates your content and workflows, 24/7.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent': '#FFD700',
+                        'cyber-green': '#00FF41',
+                        'cyber-yellow': '#FFFF00',
+                        'dark': '#0a0a0a',
+                        'card': '#0d1117',
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'fade-in-delay': 'fadeIn 0.8s ease-out 0.2s both',
+                        'glow-pulse': 'glowPulse 2s ease-in-out infinite alternate',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes glowPulse {
+            from { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.3), 0 0 45px rgba(255, 215, 0, 0.1); }
+            to { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 215, 0, 0.4), 0 0 60px rgba(255, 215, 0, 0.2); }
+        }
+        
+        .glass {
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.95) 0%, rgba(0, 0, 0, 0.9) 100%);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+        
+        .cyber-bg {
+            background: linear-gradient(135deg, #001a00 0%, #000000 50%, #0a0a0a 100%);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+        
+        .glow-button {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .glow-button:hover {
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7), 0 12px 24px rgba(0, 0, 0, 0.6);
+            transform: translateY(-2px);
+        }
+        
+        .cyber-input {
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(0, 255, 65, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .cyber-input:focus {
+            border-color: #00FF41;
+            box-shadow: 0 0 15px rgba(0, 255, 65, 0.4), inset 0 0 5px rgba(0, 255, 65, 0.1);
+            outline: none;
+        }
+        
+        .cyber-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #FFFF00 20%, #00FF41 50%, #FFFF00 80%, transparent 100%);
+            box-shadow: 0 0 8px rgba(255, 255, 0, 0.4);
+        }
+        
+        .radio-custom input[type="radio"]:checked + .radio-custom .radio-dot,
+        input[type="radio"]:checked ~ .radio-custom .radio-dot {
+            opacity: 1;
+        }
+        
+        input[type="radio"]:checked + .radio-custom .radio-dot {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="cyber-bg text-gray-300 font-mono antialiased">
+    <main class="min-h-screen px-4 py-8 sm:py-16">
+        <!-- Navigation Bar -->
+        <nav class="fixed top-0 left-0 w-full z-50 p-4">
+            <a href="https://veo3factory.com/" 
+               class="inline-flex items-center px-4 py-2 bg-black/70 backdrop-blur-sm border border-cyber-green/30 rounded-xl text-cyber-green hover:text-accent hover:border-accent/50 transition-all duration-300 text-sm font-semibold">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Back
+            </a>
+        </nav>
+
+        <div class="max-w-2xl mx-auto">
+            <!-- Hero Section -->
+            <header class="text-center mb-12 animate-fade-in mt-16">
+                <h1 class="text-4xl sm:text-6xl font-bold text-accent glow-text mb-6 leading-tight animate-glow-pulse">
+                    Schedule Your Custom AI Build
+                </h1>
+                <div class="cyber-divider mb-6"></div>
+                <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-xl mx-auto">
+                    Fill out the form below and we will contact you within 24H, there is no commitment, No cost, No obligations, and no annoying salesman knocking on your door. We want to get to know you and your business better so we can see how and if we can be of the best of service to you!
+                </p>
+            </header>
+
+            <!-- Form Card -->
+            <div class="glass rounded-2xl p-6 sm:p-8 shadow-2xl animate-fade-in-delay" id="form-container">
+                <!-- Error Banner -->
+                <div id="error-banner" class="hidden mb-6 p-4 bg-red-900/50 border-2 border-red-500 rounded-xl" style="box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);">
+                    <p class="text-red-200 text-sm">Something went wrong. Please try again.</p>
+                </div>
+
+                <form id="schedule-form" class="space-y-6">
+                    <!-- Name -->
+                    <div>
+                        <label for="name" class="block text-sm font-semibold text-white mb-2 relative">
+                            Name *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            placeholder="Your full name"
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                        >
+                    </div>
+
+                    <!-- Business Name -->
+                    <div>
+                        <label for="business_name" class="block text-sm font-semibold text-white mb-2 relative">
+                            Business Name *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <input
+                            type="text"
+                            id="business_name"
+                            name="business_name"
+                            required
+                            placeholder="Your business or company name"
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-sm font-semibold text-white mb-2 relative">
+                            Email *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            placeholder="your@email.com"
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                        >
+                    </div>
+
+                    <!-- Website -->
+                    <div>
+                        <label for="website" class="block text-sm font-semibold text-white mb-2 relative">
+                            Website *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            required
+                            placeholder="yourwebsite.com"
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500"
+                        >
+                    </div>
+
+                    <!-- Specific Build -->
+                    <div>
+                        <label for="specific_build" class="block text-sm font-semibold text-white mb-2 relative">
+                            Specific Build *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <p class="text-sm text-gray-400 mb-3">
+                            Give us a short explanation of what this build is for and what it should do.
+                        </p>
+                        <textarea
+                            id="specific_build"
+                            name="specific_build"
+                            required
+                            rows="4"
+                            placeholder="Describe your AI automation needs..."
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 resize-y"
+                        ></textarea>
+                    </div>
+
+                    <!-- Affordability Question -->
+                    <div>
+                        <label class="block text-sm font-semibold text-white mb-2 relative">
+                            If a $1k/mo service returned $3k/mo, could you afford it right now? *
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <div class="space-y-3 mt-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    name="affordability"
+                                    value="yes"
+                                    required
+                                    class="sr-only"
+                                    onchange="updateSubmitButton()"
+                                >
+                                <div class="radio-custom w-5 h-5 border-2 border-cyber-green rounded-full mr-3 flex items-center justify-center">
+                                    <div class="radio-dot w-2.5 h-2.5 bg-cyber-green rounded-full opacity-0 transition-opacity duration-200"></div>
+                                </div>
+                                <span class="text-white">Yes, I can afford it right now</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    name="affordability"
+                                    value="no"
+                                    required
+                                    class="sr-only"
+                                    onchange="updateSubmitButton()"
+                                >
+                                <div class="radio-custom w-5 h-5 border-2 border-cyber-green rounded-full mr-3 flex items-center justify-center">
+                                    <div class="radio-dot w-2.5 h-2.5 bg-cyber-green rounded-full opacity-0 transition-opacity duration-200"></div>
+                                </div>
+                                <span class="text-white">No, not right now</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Accounts -->
+                    <div>
+                        <label for="social_media_accounts" class="block text-sm font-semibold text-white mb-2 relative">
+                            Social Media Accounts
+                            <span class="text-gray-500 font-normal">(optional)</span>
+                            <span class="absolute -bottom-1 left-0 w-12 h-0.5 bg-accent"></span>
+                        </label>
+                        <textarea
+                            id="social_media_accounts"
+                            name="social_media_accounts"
+                            rows="3"
+                            placeholder="@yourhandle, https://linkedin.com/company/yourcompany, etc."
+                            class="cyber-input w-full px-4 py-3 rounded-xl text-white placeholder-gray-500 resize-y"
+                        ></textarea>
+                    </div>
+
+                    <div class="cyber-divider my-6"></div>
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        id="submit-btn"
+                        class="glow-button w-full text-black font-bold py-5 px-6 rounded-2xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 text-lg"
+                    >
+                        <span id="button-text">Schedule Call</span>
+                    </button>
+
+                    <!-- Microcopy -->
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        We'll review and get back within 24 hours.
+                    </p>
+                </form>
+
+                <!-- Hidden iframe for fallback -->
+                <iframe name="hidden_iframe" id="hidden_iframe" class="hidden" style="display:none;"></iframe>
+
+                <!-- Success State (Hidden Initially) -->
+                <div id="success-state" class="hidden text-center">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4 animate-glow-pulse">
+                            <svg class="w-8 h-8 text-dark" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-accent glow-text mb-3">Thanks! Your request was sent.</h2>
+                        <p class="text-gray-300 mb-6">We'll get back within 24 hours.</p>
+                        <button
+                            onclick="window.location.href='https://veo3factory.com/'"
+                            class="text-cyber-green hover:text-accent text-sm font-semibold underline underline-offset-4 transition-colors duration-200"
+                        >
+                            Back
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Not Qualified State (Hidden Initially) -->
+                <div id="not-qualified-state" class="hidden text-center">
+                    <div class="mb-6">
+                        <div class="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-red-400 mb-3">Unfortunately, You're Not Qualified</h2>
+                        <p class="text-gray-300 mb-6">We can only work with clients who can afford our service investment at this time.</p>
+                        <button
+                            onclick="window.location.href='https://veo3factory.com/'"
+                            class="text-cyber-green hover:text-accent text-sm font-semibold underline underline-offset-4 transition-colors duration-200"
+                        >
+                            Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center mt-8">
+                <div class="cyber-divider mb-4"></div>
+                <p class="text-xs text-gray-500">
+                    No spam. We only use your details to prepare your call.
+                </p>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+        const WEBHOOK_URL = "https://inventn8n.xyz/webhook/876c41a3-e3dc-48f0-89cf-669e0359421a";
+
+
+function collectPayload() {
+    const form = document.getElementById('schedule-form');
+    const websiteInput = form.querySelector('[name="website"]');
+    const socialInput = form.querySelector('[name="social_media_accounts"]');
+    
+    let websiteValue = websiteInput ? websiteInput.value.trim() : '';
+    
+    // Add https:// if needed
+    if (websiteValue && !websiteValue.startsWith('http://') && !websiteValue.startsWith('https://')) {
+        websiteValue = 'https://' + websiteValue;
+    }
+    
+    const data = {
+        name: form.querySelector('[name="name"]') ? form.querySelector('[name="name"]').value.trim() : '',
+        business_name: form.querySelector('[name="business_name"]') ? form.querySelector('[name="business_name"]').value.trim() : '',
+        email: form.querySelector('[name="email"]') ? form.querySelector('[name="email"]').value.trim() : '',
+        website: websiteValue,
+        specific_build: form.querySelector('[name="specific_build"]') ? form.querySelector('[name="specific_build"]').value.trim() : '',
+        affordability: form.querySelector('[name="affordability"]:checked') ? form.querySelector('[name="affordability"]:checked').value : '',
+        social_media_accounts: socialInput ? socialInput.value.trim() : ''
+    };
+
+    // ✅ Try localStorage first
+    let utmData = {};
+    const storedUTM = localStorage.getItem("utm_data");
+    if (storedUTM) {
+        utmData = JSON.parse(storedUTM);
+    } else {
+        // fallback: read directly from URL if present
+        const params = new URLSearchParams(window.location.search);
+        utmData = {
+            utm_source: params.get("utm_source"),
+            utm_medium: params.get("utm_medium"),
+            utm_campaign: params.get("utm_campaign"),
+            utm_content: params.get("utm_content"),
+            utm_term: params.get("utm_term"),
+        };
+    }
+
+    // merge into final payload
+    Object.assign(data, utmData);
+
+    console.log('Collected payload (with UTMs):', data);
+    return data;
+}
+
+
+
+        function validate(data) {
+            if (!data.name || !data.business_name || !data.email || !data.website || !data.specific_build || !data.affordability) {
+                return "Please fill all required fields.";
+            }
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                return "Please enter a valid email address.";
+            }
+            try { 
+                new URL(data.website); 
+            } catch { 
+                return "Website must be a valid URL."; 
+            }
+            return null;
+        }
+
+
+
+
+
+        function showSubmitting(btn, buttonText, isSubmitting) {
+            if (!btn || !buttonText) return;
+            btn.disabled = isSubmitting;
+            buttonText.textContent = isSubmitting ? "Submitting..." : "Schedule Call";
+        }
+
+        function showError(msg) {
+            const errorBanner = document.getElementById('error-banner');
+            const errorText = errorBanner.querySelector('p');
+            errorText.textContent = msg;
+            errorBanner.classList.remove('hidden');
+        }
+
+        function updateSubmitButton() {
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.disabled = false;
+            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            submitBtn.classList.add('glow-button');
+        }
+
+        function showSuccess() {
+            const form = document.getElementById('schedule-form');
+            const successState = document.getElementById('success-state');
+            form.classList.add('hidden');
+            successState.classList.remove('hidden');
+        }
+
+        function showNotQualified() {
+            const form = document.getElementById('schedule-form');
+            const notQualifiedState = document.getElementById('not-qualified-state');
+            form.classList.add('hidden');
+            notQualifiedState.classList.remove('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('schedule-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const buttonText = document.getElementById('button-text');
+            const errorBanner = document.getElementById('error-banner');
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Hide error banner
+                errorBanner.classList.add('hidden');
+                
+                // Show submitting state
+                showSubmitting(submitBtn, buttonText, true);
+                
+                const data = collectPayload();
+                const err = validate(data);
+                if (err) { 
+                    showSubmitting(submitBtn, buttonText, false); 
+                    showError(err); 
+                    return; 
+                }
+
+                const payload = JSON.stringify(data);
+console.log('Final payload being sent:', payload);
+
+try {
+    const response = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: payload
+    });
+
+    if (!response.ok) {
+        throw new Error("Network response was not ok");
+    }
+
+    if (data.affordability === 'yes') {
+        showSuccess();
+    } else {
+        showNotQualified();
+    }
+} catch (err) {
+    console.error("Submission error:", err);
+    showSubmitting(submitBtn, buttonText, false);
+    showError("Unable to send. Please try again.");
+}
+
+            });
+            
+            // Handle radio button styling
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', function() {
+                    // Reset all radio buttons in the same group
+                    document.querySelectorAll(`input[name="${this.name}"]`).forEach(r => {
+                        const dot = r.parentElement.querySelector('.radio-dot');
+                        if (dot) dot.style.opacity = '0';
+                    });
+                    
+                    // Show the selected one
+                    const selectedDot = this.parentElement.querySelector('.radio-dot');
+                    if (selectedDot) selectedDot.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
